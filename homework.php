@@ -17,3 +17,16 @@ print_r((string) 3.04 . ' times');
 // Lesson 8
 
 $name = 'anneirB';
+
+// Lesson 9
+
+$eurosCount = 100;
+$eurosPerDollars = 1.25;
+$dollarsPerRubles = 60;
+
+$dollarsCount = $eurosCount * $eurosPerDollars;
+$rublesCount = $dollarsCount * $dollarsPerRubles;
+
+print_r($dollarsCount);
+print_r("\n");
+print_r($rublesCount);

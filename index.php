@@ -114,3 +114,30 @@ print_r($str);
 
 $dollarsCount = 50 * 1.25;
 print_r($dollarsCount);
+
+// 62.5             // 62.5
+// 50 * 1.25        // 62.5
+// 120 / 10 * 2     // 24
+// (int) '100'      // 100
+//
+// "hello"          // "hello"
+// "Good" . "will"  // "Goodwill"
+
+$rublesPerDollar = 60;
+$dollarsCount = 50 * 1.25; // 62.5
+$rublesCount = $dollarsCount * $rublesPerDollar; // 3750
+
+print_r($rublesCount);
+
+$what = "Kings" . "road";
+print_r($what); // => "Kingsroad"
+
+// Конкатенируем строку и переменную, в которой записана строка
+$first = "Kings";
+$what = $first . "road";
+print_r($what); // => "Kingsroad"
+
+// Конкатенируем две переменные, в которых записаны строки
+$last = 'road';
+$what = $first . $last;
+print_r($what); // => "Kingsroad"

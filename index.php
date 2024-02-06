@@ -141,3 +141,108 @@ print_r($what); // => "Kingsroad"
 $last = 'road';
 $what = $first . $last;
 print_r($what); // => "Kingsroad"
+
+// Lesson 10
+
+$firstName = 'Joffrey';
+$greeting = 'Hello';
+
+print_r($greeting . ", " . $firstName . "!"); // => 'Hello, Joffrey!'
+
+$firstName = 'Joffrey';
+$greeting = 'Hello';
+
+// Обратите внимание на ограничители строки — это двойные кавычки
+// Интерполяция не работает с одинарными кавычками
+print_r("{$greeting}, {$firstName}!"); // => Hello, Joffrey!
+
+// Lesson 11
+
+$firstName = 'Alexander';
+
+print_r($firstName[0]); // => A
+
+$firstName = 'Alexander';
+
+// Длина строки 9, поэтому последний индекс — это 8
+print_r($firstName[8]);  // => r
+
+// Вопрос на самопроверку. Что выведет этот код?
+$magic = '\nyou';
+print_r($magic[1]); // => ?
+
+$firstName = 'Alexander';
+
+print_r($firstName[-1]); // => r
+
+$firstName = 'Alexander';
+$index = 0;
+
+print_r($firstName[$index]); // => A
+
+// Lesson 12
+
+// Вызов функции strrev с аргументом 'Hello!'
+$result = strrev('Hello!');
+print_r($result); // => '!olleH'
+
+$result = pow(2, 3); // 2 * 2 * 2
+print_r($result); // => 8
+
+// В современном PHP появился специальный оператор для возведения в степень
+$result = 2 ** 3; // 8
+
+$result = rand();
+
+3 + 5; // 8
+sum(3, 5); // 8
+
+// Или даже так
+// +(3, 5);
+
+// В PHP такой синтаксис невозможен, но есть языки (например, lisp),
+// где оно выглядит очень похоже
+
+// Lesson 13
+
+//abs(int|float $num): int|float
+//
+//Возвращает абсолютное значение num.
+
+$result = round(10.25, 0); // 10
+
+$result = round(10.25); // 10
+
+$result = round(10.25, 1); // 10.3
+
+// Lesson 14
+
+// 1 + 5 * 3
+// 'He' . 'Let'
+// Переменные могут быть частью выражения
+// $rate * 5
+
+// Здесь выражение — это 1 + 5
+$sum = 1 + 5;
+print_r(1 + 5);
+
+$name = 'php';
+// Индексы начинаются с нуля
+// Вызов метода и вычитание вместе!
+$lastIndex = strlen($name) - 1;
+print_r($lastIndex); // 2
+
+$name = 'php';
+print_r(strlen($name) - 1); // => 2
+
+$name = 'Toto';
+// Используется интерполяция
+print_r("Имя пользователя: {$name}");
+// => Имя пользователя: Toto
+
+// Lesson 15
+
+max(1, 10, 3); // 10
+max(1, -3, 2, 3, 2); // 3
+
+// max(mixed $value, mixed ...$values): mixed

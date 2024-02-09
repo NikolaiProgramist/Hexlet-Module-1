@@ -246,3 +246,192 @@ max(1, 10, 3); // 10
 max(1, -3, 2, 3, 2); // 3
 
 // max(mixed $value, mixed ...$values): mixed
+
+// Lesson 16
+
+strrev('cat'); // tac
+strrev('cat'); // tac
+
+rand(); // 827606195
+rand(); // 635369726
+
+// Lesson 17
+// ...
+
+// Lesson 18
+
+// Гипотетический пример
+// Место откуда берется функция
+// namespace Some\Email\Package\send;
+
+$email = 'support@hexlet.io';
+$title = 'Помогите';
+$body = 'Я написал историю успеха, как я могу получить скидку?';
+
+// Один маленький вызов — и много логики внутри
+// send($email, $title, $body);
+
+// Определение функции
+// Определение не вызывает и не выполняет функцию
+// Мы лишь говорим, что теперь такая функция существует
+function showGreeting()
+{
+    $text = 'Hello, Hexlet!';
+    print_r($text);
+
+}
+
+// Вызов функции
+showGreeting(); // => 'Hello, Hexlet!'
+
+// Минимальное определение функции, которая ничего не делает
+function noop() {}
+
+noop(); // Вызов есть, а смысла нет
+// Такая функция тоже бывает полезна,
+// но это относится к продвинутым темам
+
+// Lesson 19
+
+function saveEmail()
+{
+    $email = "  SuppORT@hexlet.IO";
+    // Обрезаем пробельные символы
+    // Функция trim() удаляет пробелы из начала и конца строки
+    $trimmedEmail = trim($email);
+    $preparedEmail = strtolower($trimmedEmail);
+    print_r($preparedEmail);
+    // Здесь будет запись в базу данных
+}
+
+$message = greeting();
+// Чтобы увидеть null, нужно воспользоваться функцией var_dump()
+var_dump($message); // => NULL
+
+function greeting()
+{
+    return 'Hello, Hexlet!';
+}
+
+// Теперь мы можем использовать результат работы функции
+$message = greeting();
+print_r($message); // => 'Hello, Hexlet!'
+// И даже выполнить какие-то действия над результатом
+print_r(strtoupper($message)); // => 'HELLO, HEXLET!'
+
+function greeting2()
+{
+    return 'Hello, Hexlet!';
+    print_r('Я никогда не выполнюсь');
+}
+
+function greeting3()
+{
+    print_r('Я появлюсь в консоли');
+    return 'Hello, Hexlet!';
+}
+// И напечатает текст на экран и вернет значение
+$message = greeting3();
+
+function greeting4()
+{
+    $message = 'Hello, Hexlet!';
+    return $message;
+}
+
+function doubleFive()
+{
+    // или return 5 + 5
+    $result = 5 + 5;
+    return $result;
+}
+
+// Lesson 20
+
+// Принимает на вход один параметр любого типа
+print_r('я параметр');
+// Принимает на вход два числовых параметра:
+// Первый — округляемое число
+// Второй — число знаков после запятой, которые нужно оставить
+round(10.1245, 3); // 10.125
+// Принимает на вход три строковых параметра:
+// Первый — что ищем
+// Второй — на что меняем
+// Третий — строка, в которой производим замену
+str_replace('go', 'mo', 'google'); // 'moogle'
+
+// Передача параметров напрямую без переменных
+// getLastChar('Hexlet'); 't'
+// Передача параметров через переменные
+// $name1 = 'Hexlet';
+// getLastChar($name1); 't'
+// $name2 = 'Goo';
+// getLastChar($name2); 'o'
+
+function getLastChar($str)
+{
+    // Вычисляем индекс последнего символа как длина строки - 1
+    return $str[strlen($str) - 1];
+}
+
+// getLastChar(); такой код не имеет смысла
+// ArgumentCountError: Too few arguments to function getLastChar(), 0 passed
+
+// Функция по нахождению среднего числа
+function average($x, $y)
+{
+    return ($x + $y) / 2;
+}
+average(1, 5); // 3
+average(1, 2); // 1.5
+
+// Lesson 21
+
+// Функция возведения в степень
+// Второй параметр имеет значение по умолчанию 2
+function myPow($x, $base = 2)
+{
+    return $x ** $base;
+}
+
+// Три во второй степени (двойка задана по умолчанию)
+myPow(3); // 3 * 3 = 9
+// Три в третьей степени
+myPow(3, 3); // 3 * 3 * 3 = 27
+
+function myPrint($text = 'nothing')
+{
+    print_r($text);
+}
+
+myPrint(); // => "nothing"
+myPrint("Hexlet"); // => "Hexlet"
+
+//function f($a = 5, $b = 10, $c = 100)
+//{
+//    ...
+//}
+
+// Такой код завершится с ошибкой
+//function f($a = 5, $b = 10, $c = 100, $x)
+//{
+//    ...
+//}
+//
+//// И такой
+//function f($a = 5, $b = 10, $x, $c = 100)
+//{
+//    ...
+//}
+//
+//// А вот такой сработает
+//function f($x, $a = 5, $b = 10, $c = 100)
+//{
+//    ...
+//}
+//
+//// И такой
+//function f($x, $y, $a = 5, $b = 10, $c = 100)
+//{
+//    ...
+//}

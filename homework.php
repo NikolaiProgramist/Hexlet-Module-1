@@ -70,3 +70,44 @@ print_r("First: " . $text[0] . "\n" . "Last: " . $text[-1]);
 // Lesson 15
 
 print_r(min(3, 10, 22, -3, 0));
+
+// Lesson 16
+
+$text = 'knock!';
+
+print_r(strtoupper($text));
+
+// Lesson 17
+
+$motto = 'Family, Duty, Honor';
+
+print_r(gettype($motto));
+
+// Lesson 18
+
+function printMotto()
+{
+    print_r('Winter is coming');
+}
+
+// Lesson 19
+
+function getCurrentYear()
+{
+    return (int) substr(date('Y-m-d'), 0, 4);
+}
+
+// Lesson 20
+
+function truncate($str, $lenght)
+{
+    return substr($str, 0, $lenght) . '...';
+}
+
+// Lesson 21
+
+function getHiddenCard($str, $lenght = 4)
+{
+    $trimmedString = substr($str, -4, 4);
+    return str_repeat('*', $lenght) . $trimmedString;
+}

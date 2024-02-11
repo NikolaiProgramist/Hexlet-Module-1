@@ -111,3 +111,19 @@ function getHiddenCard($str, $lenght = 4)
     $trimmedString = substr($str, -4, 4);
     return str_repeat('*', $lenght) . $trimmedString;
 }
+
+// Lesson 22
+
+function getAgeDifference($year1, $year2)
+{
+    $difference = $year1 - $year2;
+    return 'The age difference is ' . abs($difference);
+}
+
+// Lesson 23
+
+function getFormattedBirthday($day, $month, $year)
+{
+    $dateFormat = '%02d-%02d-%04d';
+    return sprintf($dateFormat, $day, $month, $year);
+}

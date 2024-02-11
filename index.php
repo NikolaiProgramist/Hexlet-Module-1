@@ -435,3 +435,61 @@ myPrint("Hexlet"); // => "Hexlet"
 //{
 //    ...
 //}
+
+// Lesson 22
+
+//$age = 5;
+//
+//function generate()
+//{
+//    return $age + 3;
+//}
+//
+//$result = generate();
+//
+//Error
+
+$age = 5;
+
+function changeAge()
+{
+    $age = 8;
+}
+
+changeAge();
+
+print_r($age); // => 5
+
+const AGE = 5;
+
+function generate()
+{
+    return AGE + 3;
+}
+
+$result = generate();
+
+print_r($result); // => 8
+
+// Lesson 23
+
+$x = 'Father!';
+print_r($x);
+print_r($x);
+
+$unpaidOrderCountFromClientIndebtedInPreviousQuarter = 0;
+
+$eurosCount = 1000;
+$dollarsCount = $eurosCount * 1.25; // 1250
+$rublesCount = $dollarsCount * 60;  // 75000
+
+print_r($rublesCount);
+
+$dollarsPerEuro = 1.25;
+$rublesPerDollar = 60;
+
+$eurosCount = 1000;
+$dollarsCount = $eurosCount * $dollarsPerEuro;   // 1250
+$rublesCount = $dollarsCount * $rublesPerDollar; // 75000
+
+print_r($rublesCount);

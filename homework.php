@@ -127,3 +127,10 @@ function getFormattedBirthday($day, $month, $year)
     $dateFormat = '%02d-%02d-%04d';
     return sprintf($dateFormat, $day, $month, $year);
 }
+
+// Lesson 24
+
+function isLeapYear($year)
+{
+    return ($year % 400 === 0) || ($year % 4 === 0 && $year % 100 !== 0);
+}

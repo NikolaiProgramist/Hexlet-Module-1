@@ -493,3 +493,64 @@ $dollarsCount = $eurosCount * $dollarsPerEuro;   // 1250
 $rublesCount = $dollarsCount * $rublesPerDollar; // 75000
 
 print_r($rublesCount);
+
+// Lesson 24
+
+$result = 5 > 4;
+print_r($result); // => true
+print_r('one' != 'one'); // => false
+
+function isInfant($age)
+{
+    return $age < 1;
+}
+
+// Для вывода bool используем var_dump(), а не print_r()
+var_dump(isInfant(3));   // => bool(false)
+var_dump(isInfant(0.5)); // => bool(true)
+
+//function isEven($number)
+//{
+//    return $number % 2 === 0;
+//}
+//
+//isEven(10); // true
+//isEven(3);  // false
+
+function hasSpecialChars($str)
+{
+    // Проверяет содержание специальных символов в строке
+}
+
+// Функция принимает пароль и проверяет, соответствует ли он условиям
+function isCorrectPassword($password)
+{
+    $length = strlen($password);
+    // Скобки задают приоритет, чтобы показать, что к чему относится
+    return ($length >= 8 && $length <= 20) && hasSpecialChars($password);
+}
+
+isCorrectPassword('qwerty'); // false
+isCorrectPassword('qwerty1234'); // true
+isCorrectPassword('zxcvbnmasdfghjkqwertyui'); // false
+
+//function isEven($number)
+//{
+//    return $number % 2 === 0;
+//}
+//
+//isEven(10);  // true
+//!isEven(10); // false
+//// В логике двойное отрицание подобно отсутствию отрицания вообще
+//!!isEven(10); // true
+
+print_r(true);   // => 1
+print_r(false);  // => (на экран выводится пустая строка)
+print_r(0 || 1); // => 1
+
+var_dump('' === false); // => false
+var_dump('' == false);  // => true
+
+$answer = true;
+var_dump(!$answer);  // => false
+var_dump(!!$answer); // => true

@@ -554,3 +554,84 @@ var_dump('' == false);  // => true
 $answer = true;
 var_dump(!$answer);  // => false
 var_dump(!!$answer); // => true
+
+// Lesson 25
+
+//function getTypeOfSentence($sentence)
+//{
+//    // Простой способ извлечь последний символ
+//    $lastChar = $sentence[-1];
+//    if ($lastChar === '?') {
+//        return 'question';
+//    }
+//
+//    return 'normal';
+//}
+//
+//getTypeOfSentence('Hodor');  // normal
+//getTypeOfSentence('Hodor?'); // question
+//
+//function getTypeOfSentence($sentence)
+//{
+//    $lastChar = $sentence[-1];
+//
+//    if ($lastChar === '?') {
+//        $sentenceType = 'question';
+//    } else {
+//        $sentenceType = 'normal';
+//    }
+//
+//    return "Sentence is {$sentenceType}";
+//}
+//
+//getTypeOfSentence('Hodor');  // Sentence is normal
+//getTypeOfSentence('Hodor?'); // Sentence is question
+//
+//function getTypeOfSentence($sentence)
+//{
+//    $lastChar = $sentence[-1];
+//
+//    if ($lastChar !== '?') {
+//        $sentenceType = 'normal';
+//    } else {
+//        $sentenceType = 'question';
+//    }
+//
+//    return "Sentence is {$sentenceType}";
+//}
+//
+//function getTypeOfSentence($sentence)
+//{
+//    $lastChar = $sentence[-1];
+//
+//    if ($lastChar === '!') {
+//        $sentenceType = 'exclamation';
+//    } else {
+//        $sentenceType = 'normal';
+//    }
+//
+//    if ($lastChar === '?') {
+//        $sentenceType = 'question';
+//    }
+//
+//    return "Sentence is {$sentenceType}";
+//}
+//
+//getTypeOfSentence('Who?'); // 'Sentence is question'
+//getTypeOfSentence('No');   // 'Sentence is normal'
+//getTypeOfSentence('No!');  // 'Sentence is exclamation'
+//
+//function getTypeOfSentence($sentence)
+//{
+//    $lastChar = $sentence[-1];
+//
+//    if ($lastChar === '?') {
+//        $sentenceType = 'question';
+//    } elseif ($lastChar === '!') {
+//        $sentenceType = 'exclamation';
+//    } else {
+//        $sentenceType = 'normal';
+//    }
+//
+//    return "Sentence is {$sentenceType}";
+//}

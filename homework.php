@@ -134,3 +134,16 @@ function isLeapYear($year)
 {
     return ($year % 400 === 0) || ($year % 4 === 0 && $year % 100 !== 0);
 }
+
+// Lesson 25
+
+function normalizeUrl($url)
+{
+    if (substr($url, 0, 8) === 'https://') {
+        return $url;
+    } elseif (substr($url, 0, 7) === 'http://') {
+        return 'https' . substr($url, 4, strlen($url));
+    } else {
+        return 'https://' . $url;
+    }
+}

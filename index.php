@@ -635,3 +635,68 @@ var_dump(!!$answer); // => true
 //
 //    return "Sentence is {$sentenceType}";
 //}
+
+// Lesson 26
+
+function abs2($number)
+{
+    if ($number >= 0) {
+        return $number;
+    }
+
+    return -$number;
+}
+
+abs2(10);  // 10
+abs2(-10); // 10
+
+function abs3($number)
+{
+    return $number >= 0 ? $number : -$number;
+}
+
+//<predicate> ? <expression on true> : <expression on false>`
+
+function getTypeOfSentence($sentence)
+{
+    $lastChar = substr($sentence, -1);
+
+    if ($lastChar === '?') {
+        return 'question';
+    }
+
+    return 'normal';
+}
+
+function getTypeOfSentence2($sentence)
+{
+    $lastChar = substr($sentence, -1);
+
+    return ($lastChar === '?') ? 'question' : 'normal';
+}
+
+getTypeOfSentence2('Hodor');  // normal
+getTypeOfSentence2('Hodor?'); // question
+
+function generateGreeting($name, $nickname)
+{
+    if ($name) {
+        return "Hello, {$name}!";
+    } else {
+        return "Hello, {$nickname}!";
+    }
+}
+
+generateGreeting('Bob', 'CoolBob86'); // 'Hello, Bob!'
+generateGreeting('', 'CoolBob86');    // 'Hello, CoolBob86!'
+
+function generateGreeting2($name, $nickname)
+{
+    return $name ? "Hello, {$name}!" : "Hello, {$nickname}!";
+}
+
+function generateGreeting3($name, $nickname)
+{
+    $user = $name ?: $nickname;
+    return "Hello, {$user}!";
+}

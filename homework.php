@@ -147,3 +147,23 @@ function normalizeUrl($url)
         return 'https://' . $url;
     }
 }
+
+// Lesson 26 (1)
+
+function convertText($text)
+{
+    $result = strrev($text);
+
+    if ($text[0] === strtoupper($text[0])) {
+        $result = $text;
+    }
+
+    return $result;
+}
+
+// Lesson 26 (2)
+
+function convertText2($text)
+{
+    return $text[0] === strtoupper($text[0]) ? $text : strrev($text);
+}

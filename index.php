@@ -767,3 +767,42 @@ function generateGreeting3($name, $nickname)
 //            return null;
 //    }
 //}
+
+// Lesson 28
+
+function printNumbers($lastNumber)
+{
+    // Переменная i — это сокращение от index (порядковый номер)
+    // Он используется по общему соглашению во множестве языков
+    // в качестве счетчика цикла
+    $i = 1;
+
+    while ($i <= $lastNumber) {
+        print_r($i);
+        print_r("\n");
+        $i = $i + 1;
+    }
+    print_r('finished!');
+}
+
+printNumbers(3);
+// => 1
+// => 2
+// => 3
+// => finished!
+
+function printNumbers2($lastNumber)
+{
+    $i = 1;
+
+    // Этот цикл никогда не остановится
+    // Он будет печатать всегда одно значение
+    while ($i <= $lastNumber) {
+        print_r($i);
+    }
+    print_r('finished!');
+}
+
+//while (true) {
+//    // Что-то делаем
+//}

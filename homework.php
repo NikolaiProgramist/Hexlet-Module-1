@@ -185,3 +185,16 @@ function calculate($operation, $number1, $number2)
             return null;
     }
 }
+
+// Lesson 28
+
+function printNumbers($firstNumber)
+{
+    while ($firstNumber >= 1) {
+        print_r($firstNumber);
+        print_r("\n");
+        $firstNumber--;
+    }
+
+    print_r('finished!');
+}

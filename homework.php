@@ -167,3 +167,21 @@ function convertText2($text)
 {
     return $text[0] === strtoupper($text[0]) ? $text : strrev($text);
 }
+
+// Lesson 27
+
+function calculate($operation, $number1, $number2)
+{
+    switch ($operation) {
+        case '+':
+            return $number1 + $number2;
+        case '-':
+            return $number1 - $number2;
+        case '*':
+            return $number1 * $number2;
+        case '/':
+            return $number1 / $number2;
+        default:
+            return null;
+    }
+}

@@ -700,3 +700,70 @@ function generateGreeting3($name, $nickname)
     $user = $name ?: $nickname;
     return "Hello, {$user}!";
 }
+
+// Lesson 27
+
+//if ($status === 'processing') {
+//    // Делаем раз
+//} elseif ($status === 'paid') {
+//    // Делаем два
+//} elseif ($status === 'new') {
+//    // Делаем три
+//} else {
+//    // Делаем четыре
+//}
+
+//switch ($status) {
+//    case 'processing': // status == processing
+//        // Делаем раз
+//        break;
+//    case 'paid': // status == paid
+//        // Делаем два
+//        break;
+//    case 'new': // status == new
+//        // Делаем три
+//        break;
+//    default: // else
+//        // Делаем четыре
+//}
+
+//switch ($count) {
+//    case 1:
+//        // Делаем что-то полезное
+//        break;
+//    case 2:
+//        // Делаем что-то полезное
+//        break;
+//    default:
+//        // Что-то делаем
+//}
+//
+//function doSomethingGood($count)
+//{
+//    // Заполняем
+//    switch ($count) {
+//        case 1:
+//            $result = 'one';
+//            break;
+//        case 2:
+//            $result = 'two';
+//            break;
+//        default:
+//            $result = null;
+//    }
+//
+//    // Возвращаем
+//    return $result;
+//}
+//
+//function doSomethingGood($count)
+//{
+//    switch ($count) {
+//        case 1:
+//            return 'one';
+//        case 2:
+//            return 'two';
+//        default:
+//            return null;
+//    }
+//}

@@ -806,3 +806,80 @@ function printNumbers2($lastNumber)
 //while (true) {
 //    // Что-то делаем
 //}
+
+// Lesson 29
+
+function sumNumbersFromRange ($start, $finish)
+{
+    // Технически можно менять $start
+    // Но входные аргументы нужно оставлять в исходном значении
+    // Это сделает код проще для анализа
+    $i = $start;
+    $sum = 0; // Инициализация суммы
+
+    while ($i <= $finish) { // Двигаемся до конца диапазона
+        $sum = $sum + $i; // Считаем сумму для каждого числа
+        $i = $i + 1; // Переходим к следующему числу в диапазоне
+    }
+
+    // Возвращаем получившийся результат
+    return $sum;
+}
+
+function repeat($text, $times)
+{
+    // Нейтральный элемент для строк – пустая строка
+    $result = '';
+    $i = 1;
+
+    while ($i <= $times) {
+        // Каждый раз добавляем строку к результату
+        $result = "{$result}{$text}";
+        $i = $i + 1;
+    }
+
+    return $result;
+}
+
+function printNameBySymbol($name)
+{
+    $i = 0;
+    // Такая проверка будет выполняться до конца строки,
+    // включает последний символ
+    // Его индекс — `длина строки - 1`
+    while ($i < strlen($name)) {
+        // Обращаемся к символу по индексу
+        print_r("$name[$i]\n");
+        $i = $i + 1;
+    }
+}
+
+$name = 'Arya';
+printNameBySymbol($name);
+// => 'A'
+// => 'r'
+// => 'y'
+// => 'a'
+
+function reverse($str)
+{
+    $i = 0;
+    // Нейтральный элемент для строк — это пустая строка
+    $result = '';
+
+    while ($i < strlen($str)) {
+        $currentChar = $str[$i];
+        // Соединяем в обратном порядке
+        $result = "{$currentChar}{$result}";
+        // Тоже самое через конкатенацию
+        // $result = $currentChar . $result;
+        $i = $i + 1;
+    }
+
+    return $result;
+}
+
+$name = 'Bran';
+reverse($name); // 'narB'
+// Проверка нейтрального элемента
+reverse(''); // ''

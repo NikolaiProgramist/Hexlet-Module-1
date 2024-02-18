@@ -198,3 +198,18 @@ function printNumbers($firstNumber)
 
     print_r('finished!');
 }
+
+// Lesson 29
+
+function joinNumbersFromRange($start, $finish)
+{
+    $i = $start;
+    $result = '';
+
+    while ($i <= $finish) {
+        $result = "{$result}{$i}";
+        $i++;
+    }
+
+    return $result;
+}

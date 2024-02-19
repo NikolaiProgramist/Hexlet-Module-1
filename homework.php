@@ -230,3 +230,16 @@ function isArgumentsForSubstrCorrect($str, $i, $length)
 
     return true;
 }
+
+// Lesson 31
+
+function sumOfSeries($first, $last)
+{
+    $result = 0;
+
+    for ($i = $first; $i <= $last; $i++) {
+        $result += $i;
+    }
+
+    return $result;
+}

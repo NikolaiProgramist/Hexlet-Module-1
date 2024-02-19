@@ -904,3 +904,24 @@ $str = 'If I look back I am lost';
 mysubstr($str, 1); // 'I'
 mysubstr($str, 7); // 'If I lo'
 
+// Lesson 31
+
+function reverseString($str)
+{
+    $result = '';
+
+    for ($i = 0; $i < strlen($str); $i += 1) {
+        $currentChar = $str[$i];
+        $result = "{$currentChar}{$result}";
+    }
+
+    return $result;
+}
+
+$x = 5;
+
+echo ++$x; // => 6
+echo $x;   // => 6
+
+echo $x++; // => 6
+echo $x;   // => 7

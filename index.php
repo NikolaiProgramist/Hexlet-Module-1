@@ -883,3 +883,24 @@ $name = 'Bran';
 reverse($name); // 'narB'
 // Проверка нейтрального элемента
 reverse(''); // ''
+
+// Lesson 30
+
+function mysubstr($str, $length)
+{
+    $index = 0;
+    $result = '';
+    while ($index < $length) {
+        $currentChar = $str[$index];
+        $result = "{$result}{$currentChar}";
+        $index = $index + 1;
+    }
+
+    return $result;
+}
+
+$str = 'If I look back I am lost';
+
+mysubstr($str, 1); // 'I'
+mysubstr($str, 7); // 'If I lo'
+

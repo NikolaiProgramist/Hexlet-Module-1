@@ -213,3 +213,20 @@ function joinNumbersFromRange($start, $finish)
 
     return $result;
 }
+
+// Lesson 30
+
+function isArgumentsForSubstrCorrect($str, $i, $length)
+{
+    if ($length < 0) {
+        return false;
+    } elseif ($i < 0) {
+        return false;
+    } elseif ($i >= strlen($str)) {
+        return false;
+    } elseif ($i + $length > strlen($str)) {
+        return false;
+    }
+
+    return true;
+}

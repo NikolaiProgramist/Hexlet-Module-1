@@ -243,3 +243,22 @@ function sumOfSeries($first, $last)
 
     return $result;
 }
+
+// Lesson 32
+
+function invertCase($text)
+{
+    // BEGIN (write your solution here)
+    $result = '';
+
+    for ($i = 0; $i < mb_strlen($text); $i++) {
+        if (mb_substr($text, $i, 1) === mb_strtoupper(mb_substr($text, $i, 1))) {
+            $result .= mb_strtolower(mb_substr($text, $i, 1));
+        } else {
+            $result .= mb_strtoupper(mb_substr($text, $i, 1));
+        }
+    }
+
+    return $result;
+    // END
+}

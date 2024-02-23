@@ -950,3 +950,15 @@ $symbol = mb_substr($str, 2, 1); // и
 //if (mb_strpos('Валар Моргулис', 'Валар') !== false) {
 //    // ...
 //}
+
+// Lesson 33
+
+time(); // 1532435204
+
+date('Y'); // 2018
+
+date('M', 123123123); // Nov
+
+date('l jS \of F Y h:i:s A'); // Thursday 26th of July 2018 10:58:55 AM
+
+mktime(0, 0, 0, 7, 1, 2000); // 962409600

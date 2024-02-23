@@ -262,3 +262,10 @@ function invertCase($text)
     return $result;
     // END
 }
+
+// Lesson 33
+
+function getCustomDate($timestamp)
+{
+    return date('d/m/Y', $timestamp);
+}

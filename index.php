@@ -962,3 +962,27 @@ date('M', 123123123); // Nov
 date('l jS \of F Y h:i:s A'); // Thursday 26th of July 2018 10:58:55 AM
 
 mktime(0, 0, 0, 7, 1, 2000); // 962409600
+
+// Lesson 34
+
+function sumOfSeries($start, $finish)
+{
+    $sum = 0;
+    for ($i = $start; $i < $finish; $i++) {
+        print_r('new iteration !!!!');
+        print_r($i);
+        $sum += $i;
+        print_r($sum);
+    }
+
+    return $sum;
+}
+
+sumOfSeries(3, 5);
+
+// new iteration !!!!
+// 3
+// 3
+// new iteration !!!!
+// 4
+// 7

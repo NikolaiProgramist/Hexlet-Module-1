@@ -269,3 +269,20 @@ function getCustomDate($timestamp)
 {
     return date('d/m/Y', $timestamp);
 }
+
+// Lesson 34
+
+function isPalindrome($str)
+{
+    $revStr = '';
+
+    for ($i = mb_strlen($str) - 1; $i >= 0; $i--) {
+        $revStr .= mb_substr($str, $i, 1);
+    }
+
+    if ($str === $revStr) {
+        return true;
+    } else {
+        return false;
+    }
+}

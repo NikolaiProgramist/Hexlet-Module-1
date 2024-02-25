@@ -986,3 +986,22 @@ sumOfSeries(3, 5);
 // new iteration !!!!
 // 4
 // 7
+
+// Lesson 35
+
+//print_r('Hodor')
+// PHP Parse error:  syntax error, unexpected end of file in /private/var/tmp/index.php on line 4
+
+//$i += 3;
+// PHP Notice:  Undefined variable: i in php shell code on line 1
+
+//error_reporting(0);
+
+//function foo()
+//{
+//    $i += 1;
+//}
+//
+//foo(); // Notice: Undefined variable: i
+//
+//@foo(); // Ничего не выводится, как будто все хорошо

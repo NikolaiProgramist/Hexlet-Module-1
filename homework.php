@@ -286,3 +286,12 @@ function isPalindrome($str)
         return false;
     }
 }
+
+// Lesson 35
+
+function generateError()
+{
+    // BEGIN (write your solution here)
+    fakeFunction();
+    // END
+}

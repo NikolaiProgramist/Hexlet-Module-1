@@ -1005,3 +1005,49 @@ sumOfSeries(3, 5);
 //foo(); // Notice: Undefined variable: i
 //
 //@foo(); // Ничего не выводится, как будто все хорошо
+
+// Lesson 36
+
+// file: print.php
+
+//function sayHi()
+//{
+//    print_r('Hi!');
+//}
+//
+//// file: index.php
+//
+//require_once 'print.php';
+//
+//sayHi(); // => Hi!
+
+// file: print.php
+
+//$x = 'Hi!';
+//
+//
+//// file: index.php
+//
+//require_once 'print.php';
+//
+//print_r($x); // => Hi!
+
+// file: print.php
+
+//print_r("Hi from print.php!\n");
+//
+//// file: index.php
+//
+//require_once 'print.php';
+//
+//print_r("Hi from index.php!\n");
+
+//php index.php
+//
+//Hi from print.php!
+//Hi from index.php!
+
+// index.php
+
+//print_r("Hi from print.php!\n");
+//print_r("Hi from index.php!\n");

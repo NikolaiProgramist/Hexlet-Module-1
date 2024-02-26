@@ -295,3 +295,12 @@ function generateError()
     fakeFunction();
     // END
 }
+
+// Lesson 36
+
+require_once 'src/Strings.php';
+
+function isPalindrome2($str)
+{
+    return reverse($str) === $str ? true : false;
+}

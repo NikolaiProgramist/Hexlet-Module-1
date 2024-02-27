@@ -311,3 +311,13 @@ function isPalindrome3($str)
 {
     return $str === \Strings\reverse($str);
 }
+
+// Lesson 38
+
+// Solution.php
+
+//namespace App\Solution;
+
+// NS.php
+
+//namespace App\Internal\NS;

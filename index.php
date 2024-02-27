@@ -1117,3 +1117,42 @@ sumOfSeries(3, 5);
 //    // Такой вызов неявно подставляет текущее пространство \main\
 //    multiply(2, 3); // it works!
 //}
+
+// Lesson 38
+
+//src/ # исходные файлы
+//tests/
+//composer.json
+//composer.lock
+//.git
+//README.md
+
+//my-site/
+//src/
+//Formatters/
+//Pretty.php
+//    Generator.php
+
+//namespace Formatters\Pretty;
+//
+//function render($data)
+//{
+//    // some code
+//}
+
+//namespace Generator;
+//
+//function generate($data)
+//{
+//    return \Formatters\Pretty\render($data);
+//}
+
+// src/Formatters/Pretty.php
+//namespace My\Site\Formatters\Pretty;
+
+// some code
+
+// src/Generator.php
+//namespace My\Site\Generator;
+
+// some code

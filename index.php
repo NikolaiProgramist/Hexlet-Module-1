@@ -1051,3 +1051,69 @@ sumOfSeries(3, 5);
 
 //print_r("Hi from print.php!\n");
 //print_r("Hi from index.php!\n");
+
+// Lesson 37
+
+// file: index.php
+
+//function foo()
+//{
+//    print_r('one');
+//}
+//
+//function foo()
+//{
+//    print_r('two');
+//}
+//php index.php
+//# Невозможно переопределить существующую функцию
+//# Ошибка падает на втором определении
+//PHP Fatal error:  Cannot redeclare foo() (previously declared in /private/var/tmp/index.php:3)
+
+// math.php
+
+//namespace math;
+//
+//function sum($a, $b)
+//{
+//    return $a + $b;
+//}
+//
+//// index.php
+//
+//require_once 'math.php';
+//
+//// Обратиться напрямую к функции sum не получится:
+//// PHP Fatal error:  Uncaught Error: Call to undefined function sum()
+//sum(3, 2);
+//
+//// Если указать пространство имен, то все работает
+//\math\sum(5, 8); // 13
+
+//require_once 'text.php';
+//require_once 'number.php';
+//
+//// Эта функция повторяет строчку, переданную первым параметром столько раз, сколько указано во втором параметре
+//\text\multiply('hi', 3); // hihihi
+//\number\multiply(3, 2); // 6
+
+// main.php
+
+//require_once 'text.php';
+//require_once 'number.php';
+//
+//namespace main;
+//
+//function multiply($a, $b)
+//{
+//    print_r('it works!');
+//}
+//
+//function all()
+//{
+//    \text\multiply('ho', 2); // hoho
+//    \number\multiply(3, 2); // 6
+//
+//    // Такой вызов неявно подставляет текущее пространство \main\
+//    multiply(2, 3); // it works!
+//}

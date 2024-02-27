@@ -304,3 +304,10 @@ function isPalindrome2($str)
 {
     return reverse($str) === $str ? true : false;
 }
+
+// Lesson 37
+
+function isPalindrome3($str)
+{
+    return $str === \Strings\reverse($str);
+}

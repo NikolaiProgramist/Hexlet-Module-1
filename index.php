@@ -1156,3 +1156,49 @@ sumOfSeries(3, 5);
 //namespace My\Site\Generator;
 
 // some code
+
+// Lesson 39
+
+//require_once(__DIR__ . '/src/Formatters/Pretty.php');
+//
+//namespace Generator;
+//
+//function generate($data)
+//{
+//    return \Formatters\Pretty\render($data);
+//}
+//
+//require_once(__DIR__ . '/src/Formatters/Pretty.php');
+//
+//namespace Generator;
+//
+//use function Formatters\Pretty\render;
+//
+//function generate($data)
+//{
+//    return render($data);
+//}
+//
+//// Подключаем файл, в котором определены функции:
+//// cons(), car(), cdr(), toString()
+//require_once(__DIR__ . '/src/Pairs.php');
+//
+//namespace Php\Pairs\Data\Lists;
+//
+//use function Php\Pairs\Pairs\cons;
+//use function Php\Pairs\Pairs\car;
+//use function Php\Pairs\Pairs\cdr;
+//use function Php\Pairs\Pairs\toString;
+//
+//require_once(__DIR__ . '/src/Formatters/Pretty.php');
+//require_once(__DIR__ . '/src/Formatters/Simple.php');
+//
+//namespace Generator;
+//
+//use function Formatters\Pretty\render;
+//use function Formatters\Simple\render as simpleRender;
+//
+//function generate($data)
+//{
+//    return simpleRender($data);
+//}

@@ -338,3 +338,14 @@ function countVowels($string)
 
     return $count;
 }
+
+// Lesson 40
+
+function reverse(int $number): int
+{
+    if ($number >= 0) {
+        return (int) strrev((string) $number);
+    } else {
+        return ((int) strrev((string) $number)) / -1;
+    }
+}

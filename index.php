@@ -1202,3 +1202,93 @@ sumOfSeries(3, 5);
 //{
 //    return simpleRender($data);
 //}
+
+// Lesson 40
+
+//function sayHelloTo($name)
+//{
+//    print_r("Hello, {$name}");
+//}
+//
+//// В функцию передается не то, что ожидается:
+//sayHelloTo([]);
+//// PHP Notice:  Array to string conversion
+//
+//// Тип int говорит, что ожидается число
+//function sayHelloTo(int $name)
+//{
+//    print_r("Hello, {$name}");
+//}
+//
+//// Все, что может быть приведено к указанному типу, будет считаться подходящим
+//sayHelloTo(false); // Hello, 0
+//sayHelloTo('1'); // Hello, 1
+//
+//function sayHelloTo(string $name)
+//{
+//    print_r("Hello, {$name}");
+//}
+//
+//sayHelloTo([]);
+//// PHP Fatal error:  Uncaught TypeError: Argument 1 passed to sayHelloTo() must be of the type string, array given
+//
+//function get(string $text, int $index, $default = null)
+//{
+//    $length = strlen($text);
+//    return ($index >= 0) && ($index < $length)  ? $text[$index] : $default;
+//}
+//
+//get('hi', 3, 8); // 8
+//
+//get('ho', 'hey');
+//// PHP Fatal error:  Uncaught TypeError: Argument 2 passed to get() must be of the type integer, string given
+//
+//function printStr(string $value)
+//{
+//    echo $value;
+//}
+//printStr(null);
+//// PHP Fatal error:  Uncaught TypeError: Argument 1 passed to printStr() must be of the type string, null given
+//
+//function printStr(string $value = null)
+//{
+//    echo $value;
+//}
+//printStr(null);
+//
+//function sum(int $a, int $b): int
+//{
+//    return $a + $b;
+//}
+//
+//function sayItLoud(string $text): void
+//{
+//    $loudText = "{$text}!";
+//    print_r($loudText);
+//}
+//
+//// Включаем режим строгой проверки
+//declare(strict_types = 1);
+//
+//function AddIntAndFloat(int $a, float $b): int
+//{
+//    return $a + $b;
+//}
+//
+//echo AddIntAndFloat(1.4, '2');
+//// Fatal error: Uncaught TypeError: Argument 1 passed to AddIntAndFloat() must be of the type int, float given
+//echo AddIntAndFloat(1, '2');
+//// Fatal error: Uncaught TypeError: Argument 2 passed to AddIntAndFloat() must be of the type float, string given
+//
+//function isPersonMrSmith(?string $person): bool
+//{
+//    // Тут какая-то логика
+//}
+//
+//isPersonMrSmith();
+//// Fatal error: Uncaught ArgumentCountError: Too few arguments to function
+//
+//public function getName(string $person): ?string
+//{
+//    // Тут какая-то логика
+//}

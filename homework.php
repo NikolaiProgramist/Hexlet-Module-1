@@ -349,3 +349,14 @@ function reverse(int $number): int
         return ((int) strrev((string) $number)) / -1;
     }
 }
+
+// Lesson 41
+
+function swap(int &$a, int &$b): void
+{
+    $number1 = $a;
+    $number2 = $b;
+
+    $a = $number2;
+    $b = $number1;
+}

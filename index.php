@@ -1292,3 +1292,26 @@ sumOfSeries(3, 5);
 //{
 //    // Тут какая-то логика
 //}
+
+// Lesson 41
+
+$a = 5;
+$b = $a;
+$a = 3;
+echo $b; // => 5
+
+$a = 5;
+$b =& $a;
+$a = 3;
+echo $b; // => 3
+
+// Либо так: function strangeFunction(&$text)
+function strangeFunction(string &$text)
+{
+    $text = 'hei';
+}
+
+$text = 'money';
+
+strangeFunction($text);
+echo $text; // => hei

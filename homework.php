@@ -360,3 +360,23 @@ function swap(int &$a, int &$b): void
     $a = $number2;
     $b = $number1;
 }
+
+// Lesson 42
+// ...
+
+// Challenge Совершенные числа
+
+function isPerfect(int $number): bool
+{
+    if ($number === 0) {
+        return false;
+    }
+
+    $sum = 0;
+
+    for ($i = 1; $i < $number; $i++) {
+        $sum += $number % $i === 0 ? $i : 0;
+    }
+
+    return $sum === $number ? true : false;
+}

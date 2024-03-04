@@ -1315,3 +1315,6 @@ $text = 'money';
 
 strangeFunction($text);
 echo $text; // => hei
+
+// Lesson 42
+// ...

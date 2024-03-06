@@ -1318,3 +1318,51 @@ echo $text; // => hei
 
 // Lesson 42
 // ...
+
+// Course PHP: Массивы
+
+// Lesson 1
+// ...
+
+// Lesson 2
+
+$animals = ['cats', 'dogs', 'birds'];
+
+$values = [null, 'one', 4, 'two', false];
+
+$animals = [];
+
+$animals = ['cats', 'dogs', 'birds'];
+$animals[0]; // cats
+$animals[1]; // dogs
+$animals[2]; // birds
+
+$animals = ['cats', 'dogs', 'birds'];
+count($animals); // 3
+
+$i = 1;
+$animals = ['cats', 'dogs', 'birds'];
+$animals[$i]; // dogs
+
+$i = 1;
+$j = 1;
+$animals = ['cats', 'dogs', 'birds'];
+$animals[$i + $j]; // birds
+
+$animals = ['cats', 'dogs', 'birds'];
+$animals[count($animals) - 1]; // birds
+
+$animals = ['cats', 'dogs', 'birds'];
+$animals[0] = 'horses';
+print_r($animals); // => ['horses', 'dogs', 'birds']
+
+$animals = ['cats', 'dogs', 'birds'];
+$animals[] = 'horses';
+print_r($animals); // => ['cats', 'dogs', 'birds', 'horses']
+
+$animals = ['cats', 'dogs', 'birds'];
+unset($animals[1]);
+print_r($animals); // => ['cats', 'birds']
+
+$animals = ['cats', 'dogs', 'birds'];
+//$result = unset($animals[1]); // PHP Parse error:  syntax error, unexpected 'unset' ...

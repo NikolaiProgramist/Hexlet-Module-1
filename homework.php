@@ -380,3 +380,22 @@ function isPerfect(int $number): bool
 
     return $sum === $number ? true : false;
 }
+
+// Course PHP: Массивы
+
+// Lesson 1
+// ...
+
+// Lesson 2
+
+//switch ($operationName) {
+//    case 'reset':
+//        unset($items);
+//        return [];
+//    case 'remove':
+//        unset($items[$index]);
+//        return $items;
+//    case 'change':
+//        $items[$index] = $value;
+//        return $items;
+//}

@@ -399,3 +399,10 @@ function isPerfect(int $number): bool
 //        $items[$index] = $value;
 //        return $items;
 //}
+
+// Lesson 3
+
+function get(array $items, int $index, string $default = null): mixed
+{
+    return array_key_exists($index, $items) ? $items[$index] : $default;
+}

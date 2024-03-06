@@ -1366,3 +1366,31 @@ print_r($animals); // => ['cats', 'birds']
 
 $animals = ['cats', 'dogs', 'birds'];
 //$result = unset($animals[1]); // PHP Parse error:  syntax error, unexpected 'unset' ...
+
+// Lesson 3
+
+$animals = ['cats', 'dogs', 'birds'];
+//$animals[5]; // null
+
+$ages = [3, 2];
+
+if (array_key_exists(3, $ages)) {
+    print_r('yeah!');
+} else {
+    print_r('no');
+}
+// => no
+
+$ages = [3, 2];
+
+// Операция isset принимает на вход массив, потому что он используется с подставленным индексом
+if (isset($ages[3])) {
+    print_r('yeah!');
+} else {
+    print_r('no');
+}
+// => no
+
+$age = $ages[3] ?? 5; // Значение по умолчанию равно 5
+// Эквивалентно этой строчке
+$age = isset($ages[3]) ? $ages[3] : 5;

@@ -406,3 +406,17 @@ function get(array $items, int $index, string $default = null): mixed
 {
     return array_key_exists($index, $items) ? $items[$index] : $default;
 }
+
+// Lesson 4
+
+function addPrefix(array $names, string $prefix): array
+{
+    $newNames = $names;
+    $length = count($newNames);
+
+    for ($i = 0; $i < $length; $i++) {
+        $newNames[$i] = "{$prefix} {$newNames[$i]}";
+    }
+
+    return $newNames;
+}

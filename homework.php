@@ -420,3 +420,20 @@ function addPrefix(array $names, string $prefix): array
 
     return $newNames;
 }
+
+// Lesson 5
+
+function swap2(array $items, int $index): array
+{
+    $result = $items;
+    $mirrorIndexFirst = $index - 1;
+    $mirrorIndexSecond = $index + 1;
+
+    if (array_key_exists($mirrorIndexFirst, $items) && array_key_exists($mirrorIndexSecond, $items)) {
+        $temp = $result[$mirrorIndexFirst];
+        $result[$mirrorIndexFirst] = $result[$mirrorIndexSecond];
+        $result[$mirrorIndexSecond] = $temp;
+    }
+
+    return $result;
+}

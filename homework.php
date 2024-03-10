@@ -437,3 +437,28 @@ function swap2(array $items, int $index): array
 
     return $result;
 }
+
+// Lesson 6
+
+function isContinuousSequence(array $numbers): bool
+{
+    $temp = 0;
+
+    if ($numbers && count($numbers) > 1 && $numbers[0] !== $numbers[1]) {
+        foreach ($numbers as $number) {
+            if ($numbers[0] !== $number) {
+                if ($number !== $temp + 1) {
+                    return false;
+                } else {
+                    $temp = $number;
+                }
+            } else {
+                $temp = $number;
+            }
+        }
+    } else {
+        return false;
+    }
+
+    return true;
+}

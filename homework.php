@@ -462,3 +462,20 @@ function isContinuousSequence(array $numbers): bool
 
     return true;
 }
+
+// Lesson 7
+
+function calculateAverage(array $temperatures): float
+{
+    if (!$temperatures) {
+        return 0;
+    }
+
+    $sum = 0;
+
+    foreach ($temperatures as $temperature) {
+        $sum += $temperature;
+    }
+
+    return $sum / count($temperatures);
+}

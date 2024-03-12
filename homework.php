@@ -479,3 +479,20 @@ function calculateAverage(array $temperatures): float
 
     return $sum / count($temperatures);
 }
+
+// Lesson 8
+
+function getTotalAmount(array $wallet, string $currency): int
+{
+    $sum = 0;
+    foreach ($wallet as $item) {
+        $str = substr($item, 0, 3);
+        if ($str !== $currency) {
+            continue;
+        }
+
+        $sum += (int) substr($item, 4);
+    }
+
+    return $sum;
+}

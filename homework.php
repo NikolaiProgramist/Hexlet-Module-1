@@ -496,3 +496,29 @@ function getTotalAmount(array $wallet, string $currency): int
 
     return $sum;
 }
+
+// Lesson 9
+
+function getSameParity(array $numbers)
+{
+    if (empty($numbers)) {
+        return [];
+    }
+
+    $i = $numbers[0] % 2;
+    $result = [];
+
+    foreach ($numbers as $num) {
+        if ($i === 0) {
+            if ($num % 2 === 0) {
+                $result[] = $num;
+            }
+        } else {
+            if ($num % 2 !== 0) {
+                $result[] = $num;
+            }
+        }
+    }
+
+    return $result;
+}

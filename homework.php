@@ -522,3 +522,29 @@ function getSameParity(array $numbers)
 
     return $result;
 }
+
+// Lesson 10
+
+function getSuperSeriesWinner(array $scores): string | null
+{
+    $scoreCanada = 0;
+    $scoreUssr = 0;
+
+    foreach ($scores as $game) {
+        $round = $game[0] <=> $game[1];
+
+        if ($round === -1) {
+            $scoreUssr++;
+        }
+
+        if ($round === 1) {
+            $scoreCanada++;
+        }
+    }
+
+    if ($scoreCanada === $scoreUssr) {
+        return null;
+    }
+
+    return $scoreCanada > $scoreUssr ? 'canada' : 'ussr';
+}

@@ -548,3 +548,22 @@ function getSuperSeriesWinner(array $scores): string | null
 
     return $scoreCanada > $scoreUssr ? 'canada' : 'ussr';
 }
+
+// Lesson 11
+
+function buildDefinitionList(array $definitions): string
+{
+    if (empty($definitions)) {
+        return '';
+    }
+
+    $result = [];
+
+    foreach ($definitions as $item) {
+        $result[] = "<dt>{$item[0]}</dt><dd>{$item[1]}</dd>";
+    }
+
+    $content = implode('', $result);
+
+    return "<dl>{$content}</dl>";
+}

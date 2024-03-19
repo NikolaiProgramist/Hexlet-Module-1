@@ -567,3 +567,17 @@ function buildDefinitionList(array $definitions): string
 
     return "<dl>{$content}</dl>";
 }
+
+// Lesson 12
+
+function makeCensored(string $text, array $stopWords): string
+{
+    $words = explode(' ', $text);
+    $result = [];
+
+    foreach ($words as $word) {
+        $result[] = in_array($word, $stopWords) ? '$#%!' : $word;
+    }
+
+    return implode(' ', $result);
+}

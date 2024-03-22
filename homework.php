@@ -581,3 +581,20 @@ function makeCensored(string $text, array $stopWords): string
 
     return implode(' ', $result);
 }
+
+// Lesson 13
+
+function getSameCount(array $firstColl, array $secondColl): int
+{
+    $sum = 0;
+    $firstCollUnique = array_unique($firstColl, SORT_NUMERIC);
+    $secondCollUnique = array_unique($secondColl, SORT_NUMERIC);
+
+    foreach ($firstCollUnique as $number) {
+        if (is_int(array_search($number, $secondCollUnique, true))) {
+            $sum++;
+        }
+    }
+
+    return $sum;
+}

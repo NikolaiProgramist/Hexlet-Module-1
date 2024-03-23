@@ -598,3 +598,20 @@ function getSameCount(array $firstColl, array $secondColl): int
 
     return $sum;
 }
+
+// Lesson 14
+
+function countUniqChars(string $string): int
+{
+    $uniqChars = [];
+    $count = 0;
+
+    for ($i = 0; $i < strlen($string); $i++) {
+        if (!in_array($string[$i], $uniqChars, true)) {
+            $uniqChars[] = $string[$i];
+            $count++;
+        }
+    }
+
+    return $count;
+}
